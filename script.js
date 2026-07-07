@@ -17,13 +17,29 @@ const prizes = [
 
 let currentRotation = 0;
 
+const getSavedTheme = () => {
+  try {
+    return localStorage.getItem('agarta-theme');
+  } catch {
+    return null;
+  }
+};
+
+const saveTheme = (theme) => {
+  try {
+    localStorage.setItem('agarta-theme', theme);
+  } catch {
+    // Theme persistence is optional for restricted browser modes.
+  }
+};
+
 const setTheme = (theme) => {
   root.dataset.theme = theme;
   themeToggle.checked = theme === 'dark';
-  localStorage.setItem('agarta-theme', theme);
+  saveTheme(theme);
 };
 
-setTheme(localStorage.getItem('agarta-theme') || 'light');
+setTheme(getSavedTheme() || 'light');
 
 themeToggle.addEventListener('change', () => {
   setTheme(themeToggle.checked ? 'dark' : 'light');

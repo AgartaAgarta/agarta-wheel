@@ -41,6 +41,17 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 3px solid rgba(139, 44, 255, 0.48);
+  outline-offset: 4px;
+}
+
+.wheel-start:disabled {
+  cursor: wait;
+  opacity: 0.82;
+}
+
 svg { width: 1.2em; height: 1.2em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 .page-shell {
