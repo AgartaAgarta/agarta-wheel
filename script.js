@@ -3,6 +3,7 @@ const themeToggle = document.querySelector('#themeToggle');
 const spinButton = document.querySelector('#spinButton');
 const wheel = document.querySelector('.prize-wheel');
 const wheelResult = document.querySelector('#wheelResult');
+const leadForm = document.querySelector('#request');
 
 const prizes = [
   'скидка 25%',
@@ -59,4 +60,18 @@ spinButton.addEventListener('click', () => {
     wheelResult.textContent = `В демо выпало: ${prizes[prizeIndex]}. Контакт можно отправить в форму справа.`;
     spinButton.disabled = false;
   }, 1850);
+});
+
+
+leadForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const submitButton = leadForm.querySelector('button[type="submit"]');
+  submitButton.textContent = 'Заявка готова к отправке';
+  submitButton.disabled = true;
+
+  window.setTimeout(() => {
+    submitButton.textContent = 'Получить план запуска';
+    submitButton.disabled = false;
+    leadForm.reset();
+  }, 2200);
 });
