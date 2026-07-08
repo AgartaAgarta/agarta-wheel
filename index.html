@@ -1,150 +1,28 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Agarta Wheel — интерактивное колесо фортуны для роста заявок, вовлечения и сбора контактов на сайте."
-    />
-    <title>Agarta Wheel — колесо фортуны для лидогенерации</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="logo" href="#top" aria-label="Agarta Wheel">
-        <span class="logo__mark">AW</span>
-        <span>Agarta Wheel</span>
-      </a>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#wheel">Колесо</a>
-        <a href="#benefits">Преимущества</a>
-        <a href="#request">Заявка</a>
-      </nav>
-      <a class="header-cta" href="#request">Попробовать</a>
-    </header>
+# Agarta Wheel
 
-    <main id="top">
-      <section class="hero section-grid" aria-labelledby="hero-title">
-        <div class="hero__content">
-          <p class="eyebrow">Gamified lead generation</p>
-          <h1 id="hero-title">Запускайте продажи через колесо фортуны за один вечер</h1>
-          <p class="hero__lead">
-            Agarta Wheel превращает первый контакт с посетителем в игру: выдаёт персональный бонус,
-            собирает заявку и помогает команде продаж быстрее доводить лид до сделки.
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#wheel">Запустить тест</a>
-            <a class="button button--ghost" href="#request">Получить демо</a>
-          </div>
-          <ul class="hero__stats" aria-label="Ключевые показатели">
-            <li><strong>+37%</strong><span>к вовлечению</span></li>
-            <li><strong>15 мин</strong><span>на настройку</span></li>
-            <li><strong>24/7</strong><span>сбор лидов</span></li>
-          </ul>
-        </div>
+Стартовый лендинг для сервиса **Agarta Wheel** — интерактивного колеса призов для роста заявок, сбора контактов и подключения маркетинговых интеграций.
 
-        <aside class="hero-card" aria-label="Превью виджета Agarta Wheel">
-          <div class="hero-card__topline">
-            <span></span><span></span><span></span>
-          </div>
-          <p>Сегодняшний оффер</p>
-          <h2>Скидка, подарок или бонус — решает колесо</h2>
-          <div class="mini-progress"><span></span></div>
-          <small>Интеграция с CRM, Telegram и email-уведомлениями</small>
-        </aside>
-      </section>
+## Что внутри
 
-      <section class="wheel-section section-grid" id="wheel" aria-labelledby="wheel-title">
-        <div class="wheel-copy">
-          <p class="eyebrow">Интерактивный сценарий</p>
-          <h2 id="wheel-title">Дайте посетителю причину оставить контакты</h2>
-          <p>
-            Настройте призы, вероятность выпадения и форму заявки. После вращения пользователь получает
-            понятный бонус, а вы — структурированный лид с выбранным интересом.
-          </p>
-          <div class="feature-list" id="benefits">
-            <article>
-              <span>01</span>
-              <h3>Готовые офферы</h3>
-              <p>Скидки, консультации, подарки и бонусы можно адаптировать под нишу.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Честная механика</h3>
-              <p>Сегменты и вероятности призов прозрачны для маркетолога и команды продаж.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Быстрый запуск</h3>
-              <p>Лендинг работает без сборки и готов к размещению на любом статическом хостинге.</p>
-            </article>
-          </div>
-        </div>
+- премиальный Hero-блок для B2B/SaaS с сильным оффером, CTA, крупным колесом фортуны и формой заявки;
+- переключатель дневной и ночной темы в верхней панели, по умолчанию включена светлая тема;
+- УТП-блок с преимуществами: быстрый запуск, запуск без разработчика, сбор заявок, тестовый режим, аналитика и интеграции;
+- блок интеграций с Telegram, CRM, Google Таблицами, Email/SMS, API/Webhooks и сайтом/виджетом;
+- чисто отрисованные SVG/CSS-иконки без внешних графических ассетов;
+- адаптивная верстка для десктопа, планшета и мобильных устройств;
+- статическая структура без сборки и зависимостей.
 
-        <div class="wheel-panel">
-          <div class="wheel-wrap" aria-hidden="true">
-            <div class="wheel-pointer"></div>
-            <div class="wheel">
-              <span style="--i: 0">-10%</span>
-              <span style="--i: 1">Демо</span>
-              <span style="--i: 2">Бонус</span>
-              <span style="--i: 3">-20%</span>
-              <span style="--i: 4">Гайд</span>
-              <span style="--i: 5">Подарок</span>
-            </div>
-            <button class="spin-button" type="button" id="spinButton">Крутить</button>
-          </div>
-          <p class="wheel-result" id="wheelResult" aria-live="polite">
-            Нажмите «Крутить», чтобы увидеть пример результата.
-          </p>
-        </div>
-      </section>
+## Сохранённые блоки лендинга
 
-      <section class="request-section" id="request" aria-labelledby="request-title">
-        <div>
-          <p class="eyebrow">Заявка на запуск</p>
-          <h2 id="request-title">Получите демо Agarta Wheel для вашего бизнеса</h2>
-          <p>
-            Оставьте контакты — покажем механику, подберём призы и предложим сценарий запуска под вашу воронку.
-          </p>
-        </div>
-        <form class="request-form" action="#" method="post">
-          <label>
-            Имя
-            <input type="text" name="name" placeholder="Анна" autocomplete="name" required />
-          </label>
-          <label>
-            Телефон или Telegram
-            <input type="text" name="contact" placeholder="+7 999 123-45-67" autocomplete="tel" required />
-          </label>
-          <label>
-            Ниша бизнеса
-            <select name="business" required>
-              <option value="" selected disabled>Выберите нишу</option>
-              <option>Онлайн-школа</option>
-              <option>E-commerce</option>
-              <option>Услуги</option>
-              <option>Другое</option>
-            </select>
-          </label>
-          <button class="button button--primary" type="submit">Отправить заявку</button>
-          <p class="form-note">Нажимая кнопку, вы соглашаетесь на связь по указанным контактам.</p>
-        </form>
-      </section>
-    </main>
+1. **Первый экран** — премиальный B2B/SaaS-оффер, навигация, переключатель темы, колесо призов, CTA и форма заявки.
+2. **УТП-блок** — быстрый запуск, без разработчика, сбор заявок, тестовый режим, аналитика и интеграции.
+3. **Интеграции** — Telegram, CRM, Google Таблицы, Email/SMS, API/Webhooks и сайт/виджет.
 
-    <footer class="site-footer">
-      <span>© 2026 Agarta Wheel</span>
-      <a href="mailto:hello@agarta-wheel.example">hello@agarta-wheel.example</a>
-    </footer>
+## Структура
 
-    <script src="script.js"></script>
-  </body>
-</html>
+```text
+.
+├── index.html   # Разметка лендинга
+├── styles.css   # Светлая/тёмная темы, визуал и адаптив
+├── script.js    # Переключатель темы и интерактив колеса
+└── README.md    # Инструкция запуска
