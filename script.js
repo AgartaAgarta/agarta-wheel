@@ -20,7 +20,7 @@ let currentRotation = 0;
 
 const getSavedTheme = () => {
   try {
-    return localStorage.getItem('agarta-theme');
+    return localStorage.getItem('agarta-wheel-theme-v2');
   } catch {
     return null;
   }
@@ -28,7 +28,7 @@ const getSavedTheme = () => {
 
 const saveTheme = (theme) => {
   try {
-    localStorage.setItem('agarta-theme', theme);
+    localStorage.setItem('agarta-wheel-theme-v2', theme);
   } catch {
     // Theme persistence is optional for restricted browser modes.
   }
